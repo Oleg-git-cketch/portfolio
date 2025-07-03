@@ -1,47 +1,464 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфолио Олега</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Олега | Python разработчик</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .skill-chip {
+            transition: all 0.3s ease;
+        }
+        .skill-chip:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Олег Литвинов</h1>
-    <p>Python Backend Developer</p>
-    <nav>
-      <a href="#about">Обо мне</a>
-      <a href="#projects">Проекты</a>
-      <a href="#contact">Контакты</a>
-    </nav>
-  </header>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center mb-8">
+                <div class="w-32 h-32 rounded-full bg-white flex items-center justify-center shadow-xl">
+                    <i class="fas fa-user-tie text-5xl text-purple-600"></i>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Олег</h1>
+            <p class="text-xl md:text-2xl mb-8">Python разработчик</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#about" class="px-6 py-2 bg-white text-purple-600 rounded-full font-medium hover:bg-gray-100 transition">Обо мне</a>
+                <a href="#skills" class="px-6 py-2 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-purple-600 transition">Навыки</a>
+                <a href="#projects" class="px-6 py-2 border-2 border-white text-white rounded-full font-medium hover:bg-white hover:text-purple-600 transition">Проекты</a>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <section id="about">
-      <h2>Обо мне</h2>
-      <p>Я школьник и backend-разработчик на Python. Создаю сайты на FastAPI и Django, Telegram-ботов, парсеры и backend для интернет-магазинов.</p>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Обо мне</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-gray-100 p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-user mr-2 text-purple-600"></i> Основная информация
+                            </h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-briefcase mr-2 mt-1 text-purple-600"></i>
+                                    <span><strong>Стаж разработки:</strong> 1 год</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-graduation-cap mr-2 mt-1 text-purple-600"></i>
+                                    <span><strong>Образование:</strong> Tehnikum Coding</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-map-marker-alt mr-2 mt-1 text-purple-600"></i>
+                                    <span><strong>Местоположение:</strong> Узбекистан, город Ташкент</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2 flex items-center">
+                                <i class="fas fa-code mr-2 text-purple-600"></i> Опыт работы
+                            </h3>
+                            <p class="text-gray-700">
+                                Начинающий Python разработчик с опытом работы в веб-разработке и создании бэкенд-приложений.
+                                Имею практический опыт работы с различными фреймворками и базами данных.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-gradient-to-r from-purple-100 to-blue-100 p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-rocket mr-2 text-purple-600"></i> Мои цели
+                        </h3>
+                        <p class="mb-6 text-gray-700">
+                            Стремлюсь к профессиональному росту в области backend-разработки, хочу работать над интересными проектами
+                            и постоянно совершенствовать свои навыки.
+                        </p>
+                        <h3 class="text-xl font-semibold mb-4 flex items-center">
+                            <i class="fas fa-heart mr-2 text-purple-600"></i> Увлечения
+                        </h3>
+                        <p class="text-gray-700">
+                            Помимо программирования, увлекаюсь изучением новых технологий, чтением технической литературы
+                            и решением сложных задач.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-      <h2>Мои проекты</h2>
-      <ul>
-        <li><strong>Telegram-бот магазин</strong> — <a href="https://t.me/yourbot">Смотреть</a></li>
-        <li><strong>Сайт на FastAPI</strong> — <a href="https://yourdomain.com">Смотреть</a></li>
-        <li><strong>Парсер курсов валют</strong> — <a href="https://github.com/yourusername/parser">GitHub</a></li>
-      </ul>
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Мои навыки</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Python -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-python text-2xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Python</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Опыт разработки на Python с использованием современных практик и паттернов.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-purple-600 h-2.5 rounded-full" style="width: 85%"></div>
+                    </div>
+                </div>
+
+                <!-- Web Frameworks -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-globe text-2xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Веб-фреймворки</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">FastAPI, Django, Flask для создания веб-приложений и API.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-database text-2xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Базы данных</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">PostgreSQL, SQLite, работа с ORM (SQLAlchemy).</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-docker text-2xl text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">DevOps</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Docker для контейнеризации приложений.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-yellow-600 h-2.5 rounded-full" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <!-- Version Control -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-github text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Системы контроля версий</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Git, GitHub для управления кодом и совместной работы.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-gray-600 h-2.5 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <!-- Telegram Bots -->
+                <div class="bg-white p-6 rounded-xl shadow-md card-hover transition">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-telegram text-2xl text-blue-400"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Телеграм боты</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Создание и развертывание телеграм ботов на Python.</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-blue-400 h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-xl font-semibold mb-4 flex items-center">
+                    <i class="fas fa-tools mr-2 text-purple-600"></i> Другие навыки
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="skill-chip px-4 py-2 bg-purple-100 text-purple-800 rounded-full">HTML/CSS</span>
+                    <span class="skill-chip px-4 py-2 bg-blue-100 text-blue-800 rounded-full">REST API</span>
+                    <span class="skill-chip px-4 py-2 bg-green-100 text-green-800 rounded-full">Асинхронное программирование</span>
+                    <span class="skill-chip px-4 py-2 bg-yellow-100 text-yellow-800 rounded-full">Тестирование кода</span>
+                    <span class="skill-chip px-4 py-2 bg-red-100 text-red-800 rounded-full">Отладка</span>
+                    <span class="skill-chip px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full">Алгоритмы</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Контакты</h2>
-      <p>📧 Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>📱 Telegram: <a href="https://t.me/yourusername">@yourusername</a></p>
-      <p>📄 <a href="assets/resume.pdf" download>Скачать резюме (PDF)</a></p>
-    </section>
-  </main>
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Мои проекты</h2>
 
-  <footer>
-    <p>&copy; 2025 Олег Литвинов. Все права защищены.</p>
-  </footer>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 - FastAPI Shop API -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <i class="fas fa-shopping-cart text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">FastAPI для интернет магазина</h3>
+                        <p class="text-gray-600 mb-4">Полноценное API для интернет магазина с корзиной, товарами и заказами.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-full">FastAPI</span>
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">PostgreSQL</span>
+                            <span class="text-xs px-3 py-1 bg-green-100 text-green-800 rounded-full">JWT Auth</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/shop-api" target="_blank" class="text-purple-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <i class="fas fa-code text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">FastAPI приложение</h3>
+                        <p class="text-gray-600 mb-4">Бэкенд для веб-приложения с авторизацией и базой данных PostgreSQL.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-full">FastAPI</span>
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">PostgreSQL</span>
+                            <span class="text-xs px-3 py-1 bg-green-100 text-green-800 rounded-full">SQLAlchemy</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/fastapi-project" target="_blank" class="text-purple-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
+                        <i class="fab fa-telegram text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Телеграм бот</h3>
+                        <p class="text-gray-600 mb-4">Многофункциональный бот с админ панелью и интеграцией с внешними API.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Python</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">aiogram</span>
+                            <span class="text-xs px-3 py-1 bg-red-100 text-red-800 rounded-full">API</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/telegram-bot" target="_blank" class="text-blue-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <!-- Telegram Bot 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-cyan-400 flex items-center justify-center">
+                        <i class="fab fa-telegram text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Бот для учета финансов</h3>
+                        <p class="text-gray-600 mb-4">Телеграм бот для ведения личного бюджета с аналитикой расходов.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">Python</span>
+                            <span class="text-xs px-3 py-1 bg-green-100 text-green-800 rounded-full">SQLite</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">aiogram</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/finance-bot" target="_blank" class="text-blue-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Telegram Bot 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-red-400 to-pink-400 flex items-center justify-center">
+                        <i class="fab fa-telegram text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Бот для изучения английского</h3>
+                        <p class="text-gray-600 mb-4">Бот с карточками слов, тестами и системой повторений.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-red-100 text-red-800 rounded-full">Python</span>
+                            <span class="text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-full">MongoDB</span>
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">aiogram</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/english-bot" target="_blank" class="text-red-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Telegram Bot 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-teal-400 flex items-center justify-center">
+                        <i class="fab fa-telegram text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Бот для управления задачами</h3>
+                        <p class="text-gray-600 mb-4">Todo-бот с категориями, приоритетами и напоминаниями.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-green-100 text-green-800 rounded-full">Python</span>
+                            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-800 rounded-full">PostgreSQL</span>
+                            <span class="text-xs px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">aiogram</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/todo-bot" target="_blank" class="text-green-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Telegram Bot 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-yellow-400 to-orange-400 flex items-center justify-center">
+                        <i class="fab fa-telegram text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Бот для парсинга сайтов</h3>
+                        <p class="text-gray-600 mb-4">Бот для мониторинга изменений на сайтах и отправки уведомлений.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full">Python</span>
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">BeautifulSoup</span>
+                            <span class="text-xs px-3 py-1 bg-red-100 text-red-800 rounded-full">aiogram</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/parser-bot" target="_blank" class="text-yellow-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Telegram Bot 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-indigo-400 to-purple-400 flex items-center justify-center">
+                        <i class="fab fa-telegram text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Бот для генерации контента</h3>
+                        <p class="text-gray-600 mb-4">Бот с генерацией текстов, изображений и обработкой голосовых сообщений.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full">Python</span>
+                            <span class="text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-full">OpenAI API</span>
+                            <span class="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">aiogram</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/content-bot" target="_blank" class="text-indigo-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
+                        <i class="fas fa-database text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Django CRM система</h3>
+                        <p class="text-gray-600 mb-4">Система управления клиентами с аналитикой и отчетами.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs px-3 py-1 bg-green-100 text-green-800 rounded-full">Django</span>
+                            <span class="text-xs px-3 py-1 bg-purple-100 text-purple-800 rounded-full">DRF</span>
+                            <span class="text-xs px-3 py-1 bg-gray-100 text-gray-800 rounded-full">SQLite</span>
+                        </div>
+                        <a href="https://github.com/Oleg-git-cketch/django-crm" target="_blank" class="text-green-600 hover:underline font-medium inline-flex items-center">
+                            <i class="fab fa-github mr-2"></i> Исходный код
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Контакты</h2>
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl shadow-md">
+                <div class="space-y-6">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-xl text-purple-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-500">Email</h3>
+                            <a href="mailto:aliol439003@gmail.com" class="text-lg text-purple-600 hover:text-purple-800 hover:underline">aliol439003@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-github text-xl text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-500">GitHub</h3>
+                            <a href="https://github.com/Oleg-git-cketch" target="_blank" class="text-lg text-blue-600 hover:text-blue-800 hover:underline">github.com/Oleg-git-cketch</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fab fa-telegram text-xl text-green-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium text-gray-500">Telegram</h3>
+                            <a href="https://t.me/Oleg_Fozen" target="_blank" class="text-lg text-green-600 hover:text-green-800 hover:underline">@Oleg_Fozen</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <p class="text-gray-600 mb-6">Готов к сотрудничеству и новым проектам!</p>
+                    <a href="mailto:aliol439003@gmail.com" class="inline-block px-8 py-3 bg-purple-600 text-white rounded-full font-medium hover:bg-purple-700 transition">Написать мне</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2023 Портфолио Олега. Все права защищены.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/Oleg-git-cketch" target="_blank" class="text-gray-300 hover:text-white">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://t.me/Oleg_Fozen" target="_blank" class="text-gray-300 hover:text-white">
+                    <i class="fab fa-telegram text-xl"></i>
+                </a>
+                <a href="mailto:aliol439003@gmail.com" class="text-gray-300 hover:text-white">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
