@@ -1,0 +1,169 @@
+/* Общий стиль */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d1117;
+    color: #e6edf3;
+    line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+.avatar {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar i {
+    font-size: 3rem;
+    color: #6e8efb;
+}
+.hero-buttons {
+    margin-top: 30px;
+}
+.btn, .btn-outline {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.btn {
+    background: #fff;
+    color: #6e8efb;
+}
+.btn:hover {
+    background: #f0f0f0;
+}
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+.btn-outline:hover {
+    background: #fff;
+    color: #6e8efb;
+}
+
+/* Sections */
+.section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #6e8efb;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* About */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.about-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.about-card h3 {
+    margin-bottom: 15px;
+    color: #a777e3;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+}
+.skill-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+.skill-card i {
+    font-size: 2rem;
+    color: #6e8efb;
+}
+.progress {
+    background: #2d333b;
+    height: 8px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.progress div {
+    background: linear-gradient(90deg,#6e8efb,#a777e3);
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Projects */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+}
+.project-card {
+    background: #161b22;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #6e8efb;
+}
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6e8efb;
+    text-decoration: none;
+}
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #161b22;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
