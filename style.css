@@ -1,169 +1,205 @@
-/* Общий стиль */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0d1117;
-    color: #e6edf3;
-    line-height: 1.6;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #000);
+  color: #fff;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Анимированный градиент */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Частицы */
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* чтобы мышка не мешала */
+}
+
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  background: #00ffcc;
+  opacity: 0.6;
+}
+
+@keyframes move {
+  0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50% { transform: translateY(-50px) translateX(20px); opacity: 0.3; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.6; }
 }
 
 /* Hero */
 .hero {
-    background: linear-gradient(135deg, #6e8efb, #a777e3);
-    text-align: center;
-    padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
 }
-.hero h1 {
-    font-size: 3rem;
-    margin: 20px 0;
+
+.hero .avatar {
+  font-size: 80px;
+  margin-bottom: 15px;
+  color: #00ffcc;
 }
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+
+.title {
+  font-size: 3rem;
+  margin: 0;
 }
-.avatar {
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.subtitle {
+  margin: 10px 0 20px;
+  font-size: 1.2rem;
+  color: #ccc;
 }
-.avatar i {
-    font-size: 3rem;
-    color: #6e8efb;
+
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
-.hero-buttons {
-    margin-top: 30px;
-}
-.btn, .btn-outline {
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    margin: 0 10px;
-    transition: 0.3s;
-}
+
 .btn {
-    background: #fff;
-    color: #6e8efb;
+  background: #00ffcc;
+  color: #000;
 }
-.btn:hover {
-    background: #f0f0f0;
-}
+
+.btn:hover { background: #00cc99; }
+
 .btn-outline {
-    border: 2px solid #fff;
-    color: #fff;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
 }
+
 .btn-outline:hover {
-    background: #fff;
-    color: #6e8efb;
+  background: #00ffcc;
+  color: #000;
 }
 
-/* Sections */
 .section {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: auto;
+  padding: 80px 20px;
+  text-align: center;
 }
+
 .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    position: relative;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  position: relative;
 }
+
 .section-title::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background: #6e8efb;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: 2px;
+  content: "";
+  width: 80px;
+  height: 3px;
+  background: #00ffcc;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 5px;
 }
 
-/* About */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-.about-card {
-    background: #161b22;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-.about-card h3 {
-    margin-bottom: 15px;
-    color: #a777e3;
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Skills */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
-}
-.skill-card {
-    background: #161b22;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-}
-.skill-card i {
-    font-size: 2rem;
-    color: #6e8efb;
-}
-.progress {
-    background: #2d333b;
-    height: 8px;
-    border-radius: 5px;
-    margin-top: 15px;
-}
-.progress div {
-    background: linear-gradient(90deg,#6e8efb,#a777e3);
-    height: 100%;
-    border-radius: 5px;
+.card {
+  background: rgba(20,20,20,0.9);
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
 }
 
-/* Projects */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 25px;
-}
-.project-card {
-    background: #161b22;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-.project-card:hover {
-    transform: translateY(-5px);
-}
-.project-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    color: #6e8efb;
-}
-.project-card a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #6e8efb;
-    text-decoration: none;
-}
-.project-card a:hover {
-    text-decoration: underline;
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(30,30,30,0.95);
 }
 
-/* Footer */
 .footer {
-    background: #161b22;
-    padding: 20px;
-    text-align: center;
-    color: #888;
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+  background: rgba(10,10,10,0.95);
+  margin-top: 40px;
+  color: #aaa;
 }
+
+/* 🔥 Project Cards с эффектом разделения */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  background: rgba(20,20,20,0.9);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.project-card .top,
+.project-card .bottom {
+  position: absolute;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.4s ease;
+}
+
+.project-card .top {
+  top: 0;
+}
+
+.project-card .bottom {
+  bottom: 0;
+  color: #ccc;
+}
+
+.project-card .project-link {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  background: #00ffcc;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.4s ease;
+}
+
+.project-card:hover {
+  background: rgba(30,30,30,0.95);
+}
+
+.project-card:hover .top {
+  transform: translateY(-100%);
+}
+
+.project-card:hover .bottom {
+  transform: translateY(100%);
+}
+
+.project-card:hover .project-link {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+

@@ -1,102 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио Олега | Python разработчик</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио Олега | Python разработчик</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <div class="avatar">
-                <i class="fas fa-user-tie"></i>
-            </div>
-            <h1>Олег</h1>
-            <p>Python разработчик</p>
-            <div class="hero-buttons">
-                <a href="#about" class="btn">Обо мне</a>
-                <a href="#skills" class="btn-outline">Навыки</a>
-                <a href="#projects" class="btn-outline">Проекты</a>
-            </div>
+<body class="dark-theme">
+
+  <!-- Динамичный фон -->
+  <div id="particles"></div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="avatar">
+        <i class="fas fa-user-tie"></i>
+      </div>
+      <h1 class="title">Олег</h1>
+      <p class="subtitle">Python разработчик</p>
+      <div class="buttons">
+        <a href="#about" class="btn">Обо мне</a>
+        <a href="#skills" class="btn-outline">Навыки</a>
+        <a href="#projects" class="btn-outline">Проекты</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2 class="section-title">Обо мне</h2>
+    <div class="section-content">
+      <p>
+        Я начинающий Python-разработчик, специализируюсь на backend-разработке,
+        создании Telegram-ботов и API. Постоянно развиваюсь и изучаю новые технологии.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2 class="section-title">Навыки</h2>
+    <div class="skills-grid">
+      <div class="card"><i class="fab fa-python"></i> Python</div>
+      <div class="card"><i class="fas fa-globe"></i> Django / FastAPI</div>
+      <div class="card"><i class="fas fa-database"></i> PostgreSQL</div>
+      <div class="card"><i class="fab fa-docker"></i> Docker</div>
+      <div class="card"><i class="fab fa-github"></i> GitHub</div>
+      <div class="card"><i class="fab fa-telegram"></i> Telegram боты</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 class="section-title">Проекты</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="top">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>FastAPI Shop API</h3>
         </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-        <h2 class="section-title">Обо мне</h2>
-        <div class="about-grid">
-            <div class="about-card">
-                <h3><i class="fas fa-user"></i> Основная информация</h3>
-                <ul>
-                    <li><i class="fas fa-briefcase"></i> <b>Стаж:</b> 1 год</li>
-                    <li><i class="fas fa-graduation-cap"></i> <b>Образование:</b> Tehnikum Coding</li>
-                    <li><i class="fas fa-map-marker-alt"></i> <b>Местоположение:</b> Ташкент</li>
-                </ul>
-            </div>
-            <div class="about-card">
-                <h3><i class="fas fa-rocket"></i> Цели</h3>
-                <p>Развиваться как backend-разработчик, работать над масштабными проектами и улучшать свои навыки.</p>
-                <h3><i class="fas fa-heart"></i> Увлечения</h3>
-                <p>Изучаю технологии, читаю техлитературу и люблю решать сложные задачи.</p>
-            </div>
+        <div class="bottom">
+          <p>API для интернет-магазина с корзиной и заказами.</p>
         </div>
-    </section>
+        <a href="https://github.com/Oleg-git-cketch/E-shop-Fastapi" target="_blank" class="project-link">Смотреть проект</a>
+      </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title">Мои навыки</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fab fa-python"></i>
-                <h3>Python</h3>
-                <div class="progress"><div style="width: 85%"></div></div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-globe"></i>
-                <h3>Веб-фреймворки</h3>
-                <div class="progress"><div style="width: 80%"></div></div>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-database"></i>
-                <h3>Базы данных</h3>
-                <div class="progress"><div style="width: 75%"></div></div>
-            </div>
+      <div class="project-card">
+        <div class="top">
+          <i class="fas fa-film"></i>
+          <h3>Movie Bot</h3>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="section-title">Мои проекты</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
-                <h3>FastAPI Shop API</h3>
-                <p>Полноценное API интернет-магазина.</p>
-                <a href="https://github.com/Oleg-git-cketch/E-shop-Fastapi" target="_blank">Исходный код</a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-film"></i></div>
-                <h3>MovieBot</h3>
-                <p>Поиск фильмов по базе PostgreSQL.</p>
-                <a href="https://github.com/Oleg-git-cketch/MovieBot" target="_blank">Исходный код</a>
-            </div>
-
-            <div class="project-card">
-                <div class="project-icon"><i class="fas fa-cloud-sun"></i></div>
-                <h3>WeatherBot</h3>
-                <p>Показ погоды с парсингом данных.</p>
-                <a href="https://github.com/Oleg-git-cketch/WetherBot" target="_blank">Исходный код</a>
-            </div>
+        <div class="bottom">
+          <p>Бот для поиска фильмов в базе PostgreSQL.</p>
         </div>
-    </section>
+        <a href="https://github.com/Oleg-git-cketch/MovieBot" target="_blank" class="project-link">Смотреть проект</a>
+      </div>
 
-    <footer class="footer">
-        <p>© 2025 Олег | Python разработчик</p>
-    </footer>
+      <div class="project-card">
+        <div class="top">
+          <i class="fas fa-cloud-sun"></i>
+          <h3>Weather Bot</h3>
+        </div>
+        <div class="bottom">
+          <p>Бот для прогноза погоды (парсинг).</p>
+        </div>
+        <a href="https://github.com/Oleg-git-cketch/WetherBot" target="_blank" class="project-link">Смотреть проект</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Олег | Python разработчик</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
