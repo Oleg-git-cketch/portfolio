@@ -1,20 +1,17 @@
-// Плавная прокрутка
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
+// Анимация появления секций при скролле
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
   });
 });
 
-// Динамичные частицы
-const particles = document.getElementById("particles");
-for (let i = 0; i < 50; i++) {
-  let dot = document.createElement("div");
-  dot.classList.add("dot");
-  dot.style.left = Math.random() * 100 + "vw";
-  dot.style.top = Math.random() * 100 + "vh";
-  dot.style.width = dot.style.height = Math.random() * 3 + 2 + "px";
-  dot.style.animation = `move ${5 + Math.random() * 10}s ease-in-out infinite`;
-  particles.appendChild(dot);
-}
+document.querySelectorAll("section").forEach((section) => {
+  observer.observe(section);
+});
+
+// Добавляем эффект появления
+document.querySelectorAll("section, .project-card, .skill-card").forEach(el => {
+  el.classList.add("hidden");
+});

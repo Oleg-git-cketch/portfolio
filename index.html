@@ -3,99 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Портфолио Олега | Python разработчик</title>
+  <title>Python Developer Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="dark-theme">
-
-  <!-- Динамичный фон -->
-  <div id="particles"></div>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <div class="avatar">
-        <i class="fas fa-user-tie"></i>
-      </div>
-      <h1 class="title">Олег</h1>
-      <p class="subtitle">Python разработчик</p>
-      <div class="buttons">
-        <a href="#about" class="btn">Обо мне</a>
-        <a href="#skills" class="btn-outline">Навыки</a>
-        <a href="#projects" class="btn-outline">Проекты</a>
-      </div>
-    </div>
+<body>
+  <!-- Навбар -->
+  <header>
+    <nav>
+      <div class="logo">🐍 Python Dev</div>
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2 class="section-title">Обо мне</h2>
-    <div class="section-content">
-      <p>
-        Я начинающий Python-разработчик, специализируюсь на backend-разработке,
-        создании Telegram-ботов и API. Постоянно развиваюсь и изучаю новые технологии.
-      </p>
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="animate-text">Привет, я <span>Python-программист</span></h1>
+    <p>Создаю ботов, сайты и автоматизацию</p>
+    <a href="#projects" class="btn">Смотреть проекты</a>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about" class="about">
+    <h2>Обо мне</h2>
+    <p>
+      Я занимаюсь разработкой на Python: от веб-приложений и API до Telegram-ботов
+      и автоматизации бизнес-процессов.
+    </p>
+  </section>
+
+  <!-- Навыки -->
+  <section id="skills" class="skills">
+    <h2>Навыки</h2>
+    <div class="skills-container">
+      <div class="skill-card">🐍 Python</div>
+      <div class="skill-card">🌐 Flask / Django</div>
+      <div class="skill-card">🤖 Telegram Bots</div>
+      <div class="skill-card">🗄 SQL / SQLite / PostgreSQL</div>
+      <div class="skill-card">⚡ Автоматизация</div>
+      <div class="skill-card">☁️ API интеграции</div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2 class="section-title">Навыки</h2>
-    <div class="skills-grid">
-      <div class="card"><i class="fab fa-python"></i> Python</div>
-      <div class="card"><i class="fas fa-globe"></i> Django / FastAPI</div>
-      <div class="card"><i class="fas fa-database"></i> PostgreSQL</div>
-      <div class="card"><i class="fab fa-docker"></i> Docker</div>
-      <div class="card"><i class="fab fa-github"></i> GitHub</div>
-      <div class="card"><i class="fab fa-telegram"></i> Telegram боты</div>
-    </div>
-  </section>
+  <!-- Проекты -->
+  <section id="projects" class="projects">
+    <h2>Мои проекты</h2>
+    <div class="project-grid">
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2 class="section-title">Проекты</h2>
-    <div class="projects-grid">
-
-      <div class="project-card">
-        <div class="top">
-          <i class="fas fa-shopping-cart"></i>
-          <h3>FastAPI Shop API</h3>
+      <div class="project-wrapper">
+        <div class="project-card">
+          <h3>Telegram Бот</h3>
+          <p>Автоматизация продаж через бота</p>
         </div>
-        <div class="bottom">
-          <p>API для интернет-магазина с корзиной и заказами.</p>
-        </div>
-        <a href="https://github.com/Oleg-git-cketch/E-shop-Fastapi" target="_blank" class="project-link">Смотреть проект</a>
+        <a href="https://t.me/your_bot_link" target="_blank" class="project-btn">Открыть</a>
       </div>
 
-      <div class="project-card">
-        <div class="top">
-          <i class="fas fa-film"></i>
-          <h3>Movie Bot</h3>
+      <div class="project-wrapper">
+        <div class="project-card">
+          <h3>Веб-сайт</h3>
+          <p>Сайт-портфолио с анимациями</p>
         </div>
-        <div class="bottom">
-          <p>Бот для поиска фильмов в базе PostgreSQL.</p>
-        </div>
-        <a href="https://github.com/Oleg-git-cketch/MovieBot" target="_blank" class="project-link">Смотреть проект</a>
+        <a href="https://example.com" target="_blank" class="project-btn">Открыть</a>
       </div>
 
-      <div class="project-card">
-        <div class="top">
-          <i class="fas fa-cloud-sun"></i>
-          <h3>Weather Bot</h3>
+      <div class="project-wrapper">
+        <div class="project-card">
+          <h3>Парсер</h3>
+          <p>Сбор данных с сайтов и API</p>
         </div>
-        <div class="bottom">
-          <p>Бот для прогноза погоды (парсинг).</p>
-        </div>
-        <a href="https://github.com/Oleg-git-cketch/WetherBot" target="_blank" class="project-link">Смотреть проект</a>
+        <a href="https://github.com/your-repo" target="_blank" class="project-btn">Открыть</a>
       </div>
 
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 Олег | Python разработчик</p>
+  <!-- Контакты -->
+<section id="contact" class="contact">
+  <h2>Контакты</h2>
+  <p>Хотите сотрудничать? Свяжитесь со мной:</p>
+  <div class="contact-buttons">
+    <a href="#" target="_blank" class="contact-btn tg">Telegram</a>
+    <a href="#" target="_blank" class="contact-btn gh">GitHub</a>
+    <a href="mailto:yourmail@example.com" class="contact-btn email">Email</a>
+    <a href="#" target="_blank" class="contact-btn kwork">Kwork</a>
+    <a href="#" target="_blank" class="contact-btn upwork">Upwork</a>
+  </div>
+</section>
+
+
+  <footer>
+    <p>© 2025 Python Developer | Сделано с ❤️</p>
   </footer>
 
   <script src="script.js"></script>
