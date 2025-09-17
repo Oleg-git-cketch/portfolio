@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Developer Portfolio</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <!-- Навбар -->
+  <header>
+    <nav>
+      <div class="logo">🐍 Олег Литвинов</div>
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="animate-text">Привет, я <span>Python-разработчик</span></h1>
+    <p>Создаю сайты, API, Telegram-ботов и автоматизацию</p>
+    <a href="#projects" class="btn">Смотреть проекты</a>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about" class="about">
+    <h2>Обо мне</h2>
+    <p>
+      Меня зовут <b>Олег</b>. Я Python-разработчик с опытом создания веб-сайтов, API-сервисов, Telegram-ботов
+      и систем автоматизации. Занимаюсь фрилансом и всегда открыт к новым интересным проектам.
+      Люблю разрабатывать удобные и надёжные решения для бизнеса.
+    </p>
+  </section>
+
+  <!-- Навыки -->
+  <section id="skills" class="skills">
+    <h2>Навыки</h2>
+    <div class="skills-container">
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Django | FastAPI</div>
+      <div class="skill-card">Telegram Bots (Aiogram | pyTelegramBotAPI)</div>
+      <div class="skill-card">SQL | PostgreSQL | SQLite | SQLalchemy</div>
+      <div class="skill-card">Автоматизация скриптов</div>
+      <div class="skill-card">API интеграции</div>
+      <div class="skill-card">Интеграция ИИ моделей</div>
+      <div class="skill-card">Docker</div>
+      <div class="skill-card">Git | GitHub</div>
+      <div class="skill-card">Html | Css</div>
+    </div>
+  </section>
+
+  <!-- Проекты -->
+  <section id="projects" class="projects">
+    <h2>Мои проекты</h2>
+    <div class="project-grid">
+      {% for p in project %}
+      <div class="project-wrapper">
+        <div class="project-card">
+          <h3>{{ p.pr_name }}</h3>
+          <p class="text-limit-multiline">{{ p.pr_desc }}</p>
+        </div>
+        <a href="project/{{ p.id }}" target="_blank" class="project-btn">Открыть</a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <h2>Контакты</h2>
+    <p>Хотите сотрудничать? Свяжитесь со мной:</p>
+    <div class="contact-buttons">
+      <a href="https://t.me/Oleg_Fozen" target="_blank" class="contact-btn tg">Telegram</a>
+      <a href="https://github.com/Oleg-Git-Cketch" target="_blank" class="contact-btn gh">GitHub</a>
+      <a href="mailto:aliol439003@gmail.com" class="contact-btn email">Email</a>
+      <a href="https://kwork.ru/user/FozenCodding" target="_blank" class="contact-btn kwork">Kwork</a>
+      <a href="https://www.upwork.com/freelancers/OlegFozen" target="_blank" class="contact-btn upwork">Upwork</a>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Литвинов Олег | Сайт написан на Django</p>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

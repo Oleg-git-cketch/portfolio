@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ project.pr_name }} | Portfolio</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <!-- Навбар -->
+  <header>
+    <nav>
+      <div class="logo">🐍 Олег Литвинов</div>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Детали проекта -->
+  <section class="project-detail">
+    <div class="project-header">
+      <h1>{{ project.pr_name }}</h1>
+      {% if project.pr_url %}
+        <a href="{{ project.pr_url }}" target="_blank" class="project-btn">Перейти к проекту</a>
+      {% endif %}
+    </div>
+
+    <p class="project-description">{{ project.pr_desc }}</p>
+
+    {% if project.image %}
+      <div class="project-image">
+        <img src="{{ project.image.url }}" alt="{{ project.pr_name }}">
+      </div>
+    {% endif %}
+
+    <div class="project-meta">
+      <p><b>Стек технологий:</b> {{ project.pr_stech }}</p>
+      <p><b>Дата:</b> {{ project.pr_date }}</p>
+    </div>
+      <div class="contact-buttons">
+    <a href="https://t.me/EngleeshEgeBot" target="_blank" class="external-btn">Перейти к боту</a>
+    <a href="https://github.com/YourRepo" target="_blank" class="external-btn">Исходный код</a>
+  </div>
+  </section>
+
+
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Повелитель всех времён | Django Portfolio</p>
+  </footer>
+</body>
+</html>

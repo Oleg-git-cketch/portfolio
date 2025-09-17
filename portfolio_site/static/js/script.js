@@ -15,3 +15,13 @@ document.querySelectorAll("section").forEach((section) => {
 document.querySelectorAll("section, .project-card, .skill-card").forEach(el => {
   el.classList.add("hidden");
 });
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
+
